@@ -34,9 +34,11 @@ public class People implements Iterable {
     public void removeAll() {
         personList.clear();
     }
+
     public Integer count() {
         return personList.size();
     }
+
     public People[] toArray() {
         People[] result = (People[])personList.toArray();
         return  result;
