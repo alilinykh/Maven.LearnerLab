@@ -18,7 +18,12 @@ public class PeopleTest {
     @Before
     public void setUp() throws Exception {
         person = new Person(666l,"Cersei Lannister");
-        people = new People();
+        people = new People() {
+            @Override
+            Person[] toArray() {
+                return people.toArray();
+            }
+        };
     }
 
     @After

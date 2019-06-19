@@ -23,28 +23,34 @@ public class ZipCodeWilmington {
 
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
-        ArrayList<Learner> arr = new ArrayList<>();
-        for (Object student: students
-             ) {
-            arr.add((Learner)student);
-        }
-        Learner[] learners = new Learner[arr.size()];
-        learners = arr.toArray(learners);
-        teacher.lecture(learners,numberOfHours);
+//        ArrayList<Learner> arr = new ArrayList<>();
+//        for (Object student: students
+//             ) {
+//            arr.add((Learner)student);
+//        }
+//        Learner[] learners = new Learner[arr.size()];
+//        learners = arr.toArray(learners);
+//        teacher.lecture(learners,numberOfHours);
+
+        //after refactoring
+        teacher.lecture(students.toArray(),numberOfHours);
     }
 
     public void hostLecture (long id, double numberOfHours) {
-        ArrayList<Instructor> arr = new ArrayList<>();
-        for (Object instructor : instructors
-             ) {
-            arr.add((Instructor) instructor);
-        }
-        for (Instructor i: arr
-             ) {
-            if (i.getId().equals(id)) {
-                hostLecture(i,numberOfHours);
-            }
-        }
+//        ArrayList<Instructor> arr = new ArrayList<>();
+//        for (Object instructor : instructors
+//             ) {
+//            arr.add((Instructor) instructor);
+//        }
+//        for (Instructor i: arr
+//             ) {
+//            if (i.getId().equals(id)) {
+//                hostLecture(i,numberOfHours);
+//            }
+//        }
+
+        //after refactoring
+//        instructors.findById(id).lecture(students.toArray(),numberOfHours);
     }
 
     public void getStudyMap () {
