@@ -9,15 +9,15 @@ public class ZipCodeWilmingtonTest {
 
     @Test
     public void hostLecture() {
-        Instructors instructors = Instructors.getInstance();
+//        Instructors instructors = Instructors.getInstance();
+        Educator educator = Educator.Dolio;
         Students students = Students.getInstance();
         ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
 
-        Teacher teacher = (Teacher)instructors.findById(0l);
-        Student student = (Student)students.findById(777l);
+        Student student = students.findById(777l);
         Double numHours = 100.0;
 
-        zipCodeWilmington.hostLecture(teacher,numHours);
+        zipCodeWilmington.hostLecture(educator,numHours);
         Double expected = 20.0;
         Double actual = student.getTotalStudyTime();
 

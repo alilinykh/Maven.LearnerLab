@@ -22,7 +22,7 @@ public class ZipCodeWilmington {
     }
 
 
-    public void hostLecture(Teacher teacher, double numberOfHours) {
+    public void hostLecture(Educator educator, double numberOfHours) {
 //        ArrayList<Learner> arr = new ArrayList<>();
 //        for (Object student: students
 //             ) {
@@ -33,7 +33,7 @@ public class ZipCodeWilmington {
 //        teacher.lecture(learners,numberOfHours);
 
         //after refactoring
-        teacher.lecture(students.toArray(),numberOfHours);
+        educator.lecture(students.toArray(),numberOfHours);
     }
 
     public void hostLecture (long id, double numberOfHours) {
@@ -50,7 +50,7 @@ public class ZipCodeWilmington {
 //        }
 
         //after refactoring
-//        instructors.findById(id).lecture(students.toArray(),numberOfHours);
+        instructors.findById(id).lecture(students.toArray(),numberOfHours);
     }
 
     public void getStudyMap () {
